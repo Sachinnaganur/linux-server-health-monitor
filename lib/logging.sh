@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 get_timestamp(){
-	date +"%Y+%m+%dT%H:%M:%S%z"
+	date +"%Y-%m-%dT%H:%M:%S%z"
 }
 
 log_message(){
