@@ -31,4 +31,4 @@ check_disk_health() {
     else
         DISK_STATUS="HEALTHY"
     fi
-}}
+}

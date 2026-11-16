@@ -2,6 +2,6 @@
 
 collect_cpu_usage() {
 
-    CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print 100 - $8}')
+    CPU_USAGE=$(vmstat 1 2 | tail -1 | awk '{print 100-$15}')
 
 }
