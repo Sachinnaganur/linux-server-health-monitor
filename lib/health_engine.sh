@@ -32,3 +32,24 @@ check_disk_health() {
         DISK_STATUS="HEALTHY"
     fi
 }
+
+check_overall_health() {
+
+    if [[ "$CPU_STATUS" == "CRITICAL" || \
+          "$MEMORY_STATUS" == "CRITICAL" || \
+          "$DISK_STATUS" == "CRITICAL" ]]; then
+
+        OVERALL_STATUS="CRITICAL"
+
+    elif [[ "$CPU_STATUS" == "WARNING" || \
+            "$MEMORY_STATUS" == "WARNING" || \
+            "$DISK_STATUS" == "WARNING" ]]; then
+
+        OVERALL_STATUS="WARNING"
+
+    else
+
+        OVERALL_STATUS="HEALTHY"
+
+    fi
+}

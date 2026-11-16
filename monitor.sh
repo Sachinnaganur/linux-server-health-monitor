@@ -29,6 +29,7 @@ collect_service_status
 check_cpu_health
 check_memory_health
 check_disk_health
+check_overall_health
 
 # Display report
 echo "================================="
@@ -49,6 +50,8 @@ echo
 echo "Disk Usage    : $DISK_USAGE%"
 echo "Disk Status   : $DISK_STATUS"
 echo
+echo "Overall status: $OVERALL_STATUS"
+echo
 echo "SSH Service   : $SERVICE_STATUS"
 echo
 echo "Top Processes:"
@@ -58,4 +61,5 @@ echo "$TOP_PROCESSES"
 log_message "INFO" "CPU" "Usage=$CPU_USAGE Status=$CPU_STATUS"
 log_message "INFO" "MEMORY" "Usage=$MEMORY_USAGE Status=$MEMORY_STATUS"
 log_message "INFO" "DISK" "Usage=$DISK_USAGE Status=$DISK_STATUS"
+log_message "INFO" "OVERALL" "Status=$OVERALL_STATUS"
 log_message "INFO" "SERVICE" "SSH=$SERVICE_STATUS"
