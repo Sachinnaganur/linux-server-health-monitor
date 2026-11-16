@@ -1,0 +1,19 @@
+# Log files
+logs/*.log
+
+# Backup files
+*~
+*.bak
+
+# Vim files
+*.swp
+*.swo
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.tmp
+
+# Environment files
+.env
